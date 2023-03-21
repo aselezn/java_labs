@@ -91,7 +91,7 @@ public class Country {
         this.capitalPopulation = capitalPopulation;
     }   else {
             this.capital = null;
-            this.capitalPopulation = 0;
+            this.capitalPopulation = -1;
         }
     }
 

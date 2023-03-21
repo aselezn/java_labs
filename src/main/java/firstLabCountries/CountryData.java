@@ -15,9 +15,9 @@ public class CountryData {
         Country rus = new Country("Russia", 10, 0,"Moscow", 0);
         //rus.print();
         //rus.setArea(-1);
-        //rus.setPopulation(0);
+        rus.setPopulation(0);
         //rus.setCapital("СПб", 1_000_000);
-        rus.print();
+        //rus.print();
         //Country.printAll(countriesData);
     }
 }
