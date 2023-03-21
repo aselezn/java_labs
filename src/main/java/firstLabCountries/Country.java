@@ -2,7 +2,8 @@ package firstLabCountries;
 
 public class Country {
 
-    public static int POPULATION_UNKNOWN = 0; //константа: определяет значение населения столицы по умолчанию
+    //константа: определяет значение населения столицы по умолчанию (final - значит нельзя изменять)
+    public static final int POPULATION_UNKNOWN = 0;
 
     String country; //навзание страны
     int area;// площадь старны
@@ -26,6 +27,8 @@ public class Country {
         this.country = country;
         this.area = area;
         this.population = population;
+        this.capital = null;
+        this.capitalPopulation = 0;
     }
 
     //геттер расчитывающий плотность насленеия,
@@ -53,7 +56,7 @@ public class Country {
     //сеттер устанавливающий значение площади страны, с валидацией
     public void setArea(int area){
         if(area <= 0)
-            throw new IllegalArgumentException("Country attribute can't be greater than or equal to zero.");
+            throw new IllegalArgumentException("Area attribute can't be greater than or equal to zero.");
         this.area = area;
     }
 
@@ -92,23 +95,33 @@ public class Country {
         }
     }
 
+    //метод выводящий все данные об одной стране
     public void print(){
         System.out.println("country: " + country + ", area: " + area);
         if (population != POPULATION_UNKNOWN)
             System.out.println("population: " + population);
         else
-            System.out.println("population: -");
+            System.out.println("population: unknown");
         System.out.println("density: " + getPopulationDensity());
 
         if (capital != null)
             System.out.println("capital: " + capital);
         else
-            System.out.println("capital: -");
+            System.out.println("capital: unknown");
 
         if (capitalPopulation != POPULATION_UNKNOWN)
             System.out.println("capital population: " + capitalPopulation);
         else
-            System.out.println("capital population: -");
+            System.out.println("capital population: unknown");
+    }
+
+    //данные о всех странах
+    public static void printAll(Country[] countriesData) {
+
+        for (Country country : countriesData) {
+            country.print();
+            System.out.println();
+        }
     }
 
 }
