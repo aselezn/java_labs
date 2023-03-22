@@ -10,15 +10,11 @@ public class CountryData {
                 new Country("Andorra", 467, 85_400, "Andorra la Vella", 22_600),
                 new Country("Singapore", 725, 5_700_000)
         };
+        Country.printAll(countriesData);
 
         //Для тестирвоания методов:
-        Country rus = new Country("Russia", 10, 0,"Moscow", 0);
+        //Country rus = new Country("Russia", 10, 0,"Moscow", 0);
         //rus.print();
-        //rus.setArea(-1);
-        rus.setPopulation(0);
-        //rus.setCapital("СПб", 1_000_000);
-        //rus.print();
-        //Country.printAll(countriesData);
     }
 }
 

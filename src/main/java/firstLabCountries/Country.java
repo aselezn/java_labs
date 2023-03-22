@@ -12,21 +12,19 @@ public class Country {
     int capitalPopulation;//поппуляция столицы
 
     //конструктор принемающий значение всех атрибутов
-    public Country(String country, int area, int population,
-                   String capital, int capitalPopulation) {
-        this.country = country;
-        this.area = area;
-        this.population = population;
-        this.capital = capital;
-        this.capitalPopulation = capitalPopulation;
+    public Country(String country, int area, int population, String capitalName, int capitalPopulation) {
+        setCountry(country);
+        setArea(area);
+        setPopulation(population);
+        setCapital(capitalName, capitalPopulation);
     }
 
     //для городов-государств:
     // принимает только название, площадь и население страны, оставляя данные о столице пустыми
     public Country(String country, int area, int population) {
-        this.country = country;
-        this.area = area;
-        this.population = population;
+        setCountry(country);
+        setArea(area);
+        setPopulation(population);
         this.capital = null;
         this.capitalPopulation = 0;
     }
@@ -86,7 +84,7 @@ public class Country {
     public void setCapital(String capital, int capitalPopulation) {
         if (capital != null) {
             if (capitalPopulation <= 0 && capitalPopulation != POPULATION_UNKNOWN)
-                throw new IllegalArgumentException("Capital attribute can't than or equal to zero.");
+                throw new IllegalArgumentException("capitalPopulation attribute can't than or equal to zero.");
         this.capital = capital;
         this.capitalPopulation = capitalPopulation;
     }   else {
@@ -97,25 +95,25 @@ public class Country {
 
     //метод выводящий все данные об одной стране
     public void print(){
-        System.out.println("country: " + country + ", area: " + area);
+        System.out.println("country: " + getCountry() + ", area: " + getArea());
         if (population != POPULATION_UNKNOWN)
-            System.out.println("population: " + population);
+            System.out.println("population: " + getPopulation());
         else
             System.out.println("population: unknown");
         System.out.println("density: " + getPopulationDensity());
 
         if (capital != null)
-            System.out.println("capital: " + capital);
+            System.out.println("capital: " + getCapital());
         else
             System.out.println("capital: unknown");
 
         if (capitalPopulation != POPULATION_UNKNOWN)
-            System.out.println("capital population: " + capitalPopulation);
+            System.out.println("capital population: " + getCapitalPopulation());
         else
             System.out.println("capital population: unknown");
     }
 
-    //данные о всех странах
+    //метод выводящий данные о всех странах
     public static void printAll(Country[] countriesData) {
 
         for (Country country : countriesData) {
