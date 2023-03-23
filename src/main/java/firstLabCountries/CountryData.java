@@ -11,7 +11,6 @@ public class CountryData {
                 new Country("Singapore", 725, 5_700_000)
         };
         Country.printAll(countriesData);
-
         //Для тестирвоания методов:
         //Country rus = new Country("Russia", 10, 0,"Moscow", 0);
         //rus.print();
