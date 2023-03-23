@@ -1,6 +1,5 @@
 package firstLabBooks;
 
-import firstLabCountries.Country;
 
 public class Books {
 
@@ -91,6 +90,19 @@ public class Books {
             }
         }
         this.authors = authors;
+    }
+
+    //метод, возвращающий кол-во авторов
+    public int getAuthorsCount() {
+        return authors == null ? 0 : authors.length;
+    }
+
+    //метод, возвращающий индекс автора
+    public String getAuthor(int index) {
+        if (authors == null || index < 0 || index >= authors.length) {
+            throw new IllegalArgumentException("Incorrect author index.");
+        }
+        return authors[index];
     }
 
 
