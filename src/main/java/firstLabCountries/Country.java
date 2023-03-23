@@ -5,11 +5,11 @@ public class Country {
     //константа: определяет значение населения столицы по умолчанию (final - значит нельзя изменять)
     public static final int POPULATION_UNKNOWN = 0;
 
-    String country; //навзание страны
-    int area;// площадь старны
-    int population;//население страны
-    String capital;//название столицы страны
-    int capitalPopulation;//поппуляция столицы
+    private String country; //навзание страны
+    private int area;// площадь старны
+    private int population;//население страны
+    private String capital;//название столицы страны
+    private int capitalPopulation;//поппуляция столицы
 
     //конструктор принемающий значение всех атрибутов
     public Country(String country, int area, int population, String capitalName, int capitalPopulation) {

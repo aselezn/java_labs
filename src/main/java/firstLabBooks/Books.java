@@ -3,10 +3,10 @@ package firstLabBooks;
 
 public class Books {
 
-    String name; //поле название книги
-    Publishers publisher; //поле данных об издательстве книги
-    int year; // год издания книги
-    String[] authors; //автор книги
+    private String name; //поле название книги
+    private Publishers publisher; //поле данных об издательстве книги
+    private int year; // год издания книги
+    private String[] authors; //автор книги
 
     //констурктор для случаев, если авторов нет, с валидацией
     public Books(String name, Publishers publisher, int year){
