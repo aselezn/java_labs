@@ -119,7 +119,7 @@ public class Books {
 
     //метод выводящий данные о всех книгах
     public static void printAll(Books[] booksData) {
-        for (Books books : booksData) {
+        for (Books books : booksData) { //тип имя временной переменной : источник (массив или коллекция)
             books.print();
             System.out.println();
         }
