@@ -19,6 +19,6 @@ public class Image extends File{
 
     @Override
     public String getDetails() {
-        return "image, " + getResolution().getResolutionInfo();
+        return getFormat() + ", " + getResolution().getResolutionInfo();
     }
 }

@@ -32,7 +32,7 @@ public abstract class File {
     }
 
     public String getFormat() {
-        if (format.length() < 1 || format.length() > 4) {
+        if (format == null) {
             throw new IllegalArgumentException("Invalid format length: " + format);
         }
         return format;

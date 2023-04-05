@@ -8,6 +8,6 @@ public class MediaFile extends AbstractMedia {
 
     @Override
     public String getDetails() {
-        return "audio, " + getDescription() + ", " + getDuration().getDurationInfo();
+        return getFormat() + ", " + getDescription() + ", " + getDuration().getDurationInfo();
     }
 }

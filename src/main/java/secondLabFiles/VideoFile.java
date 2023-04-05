@@ -20,6 +20,6 @@ public class VideoFile extends AbstractMedia{
 
     @Override
     public String getDetails() {
-        return "video, " + getDescription() + ", " + getDuration().getDurationInfo() + ", " + getResolution().getResolutionInfo();
+        return getFormat() + ", " + getDescription() + ", " + getDuration().getDurationInfo() + ", " + getResolution().getResolutionInfo();
     }
 }
